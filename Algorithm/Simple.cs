@@ -17,14 +17,12 @@ namespace Algorithm
 				if (n%i==0)
 				{
 					d++;
-					
 				}
-				
+		
 			}
 			if(d == 0)
 			{
 				Console.WriteLine("число простое");
-
 			}
 			else
 			{
