@@ -41,24 +41,7 @@ namespace Algorithm
                 }
             }
         };
-        public int PreOrder(Node root)
-        {
-            if(root != null)
-            {
-                Console.Write(root.Data);
-                if(root.Left != null || root.Right != null)
-                {
-                    Console.Write("(");
-                    if(root.Left != null) PreOrder(root.Left);
-                    else Console.Write("NIL");
-                    Console.Write("(");
-                    if(root.Right != null) PreOrder(root.Right);
-                    else Console.Write("NIL");
-                    Console.Write(")");
-                }
-            }
-            return 0;
-        }
+       
     }
 
 
