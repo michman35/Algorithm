@@ -8,33 +8,32 @@ using BenchmarkDotNet.Running;
 
 namespace Algorithm
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-			var tree = new Tree<int>();
-			tree.Add(5);
-			tree.Add(3);
-			tree.Add(7);
-			tree.Add(1);
-			tree.Add(2);
-			tree.Add(8);
-			tree.Add(6);
-			tree.Add(9);
-			foreach(var item in tree.Preorder()) // обход в ширину 
-			{
-				Console.WriteLine(item);
-			}
-			Console.ReadLine();
-			foreach(var item in tree.Postorder())//обход в глубину 
-			{
-				Console.WriteLine(item);
-			}
-		}
+    class Program
+    {
 
+        static void Main(string[] args)
+        {
+            Node nodee = new Node();
 
-	}
+            nodee.Tree();
+            nodee.PreOrderTravers(nodee);
+            Console.WriteLine();
+
+            Console.Write("Stack: ");
+            nodee.Stack(nodee);
+            Console.WriteLine();
+            Console.Write("Queue: ");
+            nodee.Queue(nodee);
+        }
+    }
 }
+    /* Сергей , понял что мой код к предыдщему задания , мягко сказать не очень , поэтому поьзуясь 
+    вашим материалом переписал дерево с поиском в глубину и ширину используя очередь и стек . С графом засел 
+     в тупик , данные обходы не подойдут для него как я понял из методички . И что бы описать граф , мне 
+     нужно сначала описать его вершину и ребра . А затем написать класс описывающий граф с методами добавления вершин и ребер.
+     Все правильно ? */
+
+
 
 
 	
